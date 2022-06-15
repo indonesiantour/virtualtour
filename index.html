@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Ayam Petok</title>
+		<title>Virtual Tour</title>
 		<!--projectdescription--><meta name="description" content="Baruuuuurururuurru"><!--projectdescription-end-->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta charset="utf-8">
@@ -96,7 +96,8 @@
 		<div id="tmp">
 			<div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;" id="tmpcontent"></div>
 			<div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
-		</div>
+		</div>
+
 
 		<div id="loading" class="fullwrapper" style="display: table; width: 100%; height: 100%;">
     		<div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
@@ -108,13 +109,16 @@
 			
             var container = document.querySelector( '#container' );
 			/*panolens*/
-var viewer = new PANOLENS.Viewer( { container: container , controlBar: false,  output: 'console' , autoHideInfospot: false, } );
-/*panolens-end*/
+
+var viewer = new PANOLENS.Viewer( { container: container , controlBar: false,  output: 'console' , autoHideInfospot: false, } );
+
+/*panolens-end*/
 			
 			viewer.addUpdateCallback(function(){});
 			
 			/*panoramas*/
-var menuawal = new PANOLENS.ImagePanorama( "panoramas/menuawal.3.jpg" );
+
+var menuawal = new PANOLENS.ImagePanorama( "panoramas/menuawal.3.jpg" );
 			menuawal.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -124,20 +128,30 @@
 			menuawal.addEventListener('click', function(e){
 			});
 
-var infospotmenuawal0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotmenuawal0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotmenuawal0.position.set( 4764.60, -1334.75, -652.45 );
 					menuawal.add(infospotmenuawal0);
-infospotmenuawal0.addEventListener('click', function(){
-ChangePanorama('GEDUNGJOANG');
-});
-var infospotmenuawal1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotmenuawal0.addEventListener('click', function(){
+
+ChangePanorama('GEDUNGJOANG');
+
+});
+
+var infospotmenuawal1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotmenuawal1.position.set( 4196.32, -1289.39, 2382.94 );
 					menuawal.add(infospotmenuawal1);
-infospotmenuawal1.addEventListener('click', function(){
-ChangePanorama('KOTATUA');
-});
-viewer.add( menuawal );
-var GEDUNGJOANG = new PANOLENS.ImagePanorama( "panoramas/GEDUNGJOANG.jpg" );
+
+infospotmenuawal1.addEventListener('click', function(){
+
+ChangePanorama('KOTATUA');
+
+});
+
+viewer.add( menuawal );
+
+var GEDUNGJOANG = new PANOLENS.ImagePanorama( "panoramas/GEDUNGJOANG.jpg" );
 			GEDUNGJOANG.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -147,20 +161,30 @@
 			GEDUNGJOANG.addEventListener('click', function(e){
 			});
 
-var infospotGEDUNGJOANG0 = new PANOLENS.Infospot( 512, hotspotIcons[1].data, true );
+
+var infospotGEDUNGJOANG0 = new PANOLENS.Infospot( 512, hotspotIcons[1].data, true );
 					infospotGEDUNGJOANG0.position.set( 4850.47, -1152.27, -273.94 );
 					GEDUNGJOANG.add(infospotGEDUNGJOANG0);
-infospotGEDUNGJOANG0.addEventListener('click', function(){
-ChangePanorama('INDORJOANG2');
-});
-var infospotGEDUNGJOANG1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotGEDUNGJOANG0.addEventListener('click', function(){
+
+ChangePanorama('INDORJOANG2');
+
+});
+
+var infospotGEDUNGJOANG1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotGEDUNGJOANG1.position.set( 1493.28, -1746.28, -4434.00 );
 					GEDUNGJOANG.add(infospotGEDUNGJOANG1);
-infospotGEDUNGJOANG1.addEventListener('click', function(){
-ChangePanorama('menuawal');
-});
-viewer.add( GEDUNGJOANG );
-var KOTATUA = new PANOLENS.ImagePanorama( "panoramas/KOTATUA.jpg" );
+
+infospotGEDUNGJOANG1.addEventListener('click', function(){
+
+ChangePanorama('menuawal');
+
+});
+
+viewer.add( GEDUNGJOANG );
+
+var KOTATUA = new PANOLENS.ImagePanorama( "panoramas/KOTATUA.jpg" );
 			KOTATUA.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -170,26 +194,40 @@
 			KOTATUA.addEventListener('click', function(e){
 			});
 
-var infospotKOTATUA0 = new PANOLENS.Infospot( 512, hotspotIcons[1].data, true );
+
+var infospotKOTATUA0 = new PANOLENS.Infospot( 512, hotspotIcons[1].data, true );
 					infospotKOTATUA0.position.set( 4926.54, -772.66, -248.66 );
 					KOTATUA.add(infospotKOTATUA0);
-infospotKOTATUA0.addEventListener('click', function(){
-ChangePanorama('INDORkotatua');
-});
-var infospotKOTATUA1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotKOTATUA0.addEventListener('click', function(){
+
+ChangePanorama('INDORkotatua');
+
+});
+
+var infospotKOTATUA1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotKOTATUA1.position.set( 2468.40, -536.83, -4309.78 );
 					KOTATUA.add(infospotKOTATUA1);
-infospotKOTATUA1.addEventListener('click', function(){
-ChangePanorama('umkm');
-});
-var infospotKOTATUA2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotKOTATUA1.addEventListener('click', function(){
+
+ChangePanorama('umkm');
+
+});
+
+var infospotKOTATUA2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotKOTATUA2.position.set( 126.08, -575.78, -4956.26 );
 					KOTATUA.add(infospotKOTATUA2);
-infospotKOTATUA2.addEventListener('click', function(){
-ChangePanorama('menuawal');
-});
-viewer.add( KOTATUA );
-var INDORkotatua = new PANOLENS.ImagePanorama( "panoramas/INDORkotatua.jpg" );
+
+infospotKOTATUA2.addEventListener('click', function(){
+
+ChangePanorama('menuawal');
+
+});
+
+viewer.add( KOTATUA );
+
+var INDORkotatua = new PANOLENS.ImagePanorama( "panoramas/INDORkotatua.jpg" );
 			INDORkotatua.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -199,32 +237,50 @@
 			INDORkotatua.addEventListener('click', function(e){
 			});
 
-var infospotINDORkotatua0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotINDORkotatua0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua0.position.set( -4057.98, -2462.71, 1542.19 );
 					INDORkotatua.add(infospotINDORkotatua0);
-infospotINDORkotatua0.addEventListener('click', function(){
-ChangePanorama('KOTATUA');
-});
-var infospotINDORkotatua1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORkotatua0.addEventListener('click', function(){
+
+ChangePanorama('KOTATUA');
+
+});
+
+var infospotINDORkotatua1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua1.position.set( 3737.75, -626.87, -3249.94 );
 					INDORkotatua.add(infospotINDORkotatua1);
-infospotINDORkotatua1.addEventListener('click', function(){
-showMedia(1, 'images/monas.jpg');
-});
-var infospotINDORkotatua2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORkotatua1.addEventListener('click', function(){
+
+showMedia(1, 'images/monas.jpg');
+
+});
+
+var infospotINDORkotatua2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua2.position.set( -276.56, -632.74, -4941.63 );
 					INDORkotatua.add(infospotINDORkotatua2);
-infospotINDORkotatua2.addEventListener('click', function(){
-showMedia(1, 'images/kota.jpg');
-});
-var infospotINDORkotatua3 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORkotatua2.addEventListener('click', function(){
+
+showMedia(1, 'images/kota.jpg');
+
+});
+
+var infospotINDORkotatua3 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua3.position.set( -1854.47, -2402.60, -3964.99 );
 					INDORkotatua.add(infospotINDORkotatua3);
-infospotINDORkotatua3.addEventListener('click', function(){
-window.open( 'https://www.youtube.com/watch?v=_e5KjzyAOi0', '_blank');
-});
-viewer.add( INDORkotatua );
-var INDORJOANG2 = new PANOLENS.ImagePanorama( "panoramas/INDORJOANG2.jpg" );
+
+infospotINDORkotatua3.addEventListener('click', function(){
+
+window.open( 'https://www.youtube.com/watch?v=_e5KjzyAOi0', '_blank');
+
+});
+
+viewer.add( INDORkotatua );
+
+var INDORJOANG2 = new PANOLENS.ImagePanorama( "panoramas/INDORJOANG2.jpg" );
 			INDORJOANG2.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -234,32 +290,50 @@
 			INDORJOANG2.addEventListener('click', function(e){
 			});
 
-var infospotINDORJOANG20 = new PANOLENS.Infospot( 512, hotspotIcons[1].data, true );
+
+var infospotINDORJOANG20 = new PANOLENS.Infospot( 512, hotspotIcons[1].data, true );
 					infospotINDORJOANG20.position.set( -786.40, -2085.40, 4465.85 );
 					INDORJOANG2.add(infospotINDORJOANG20);
-infospotINDORJOANG20.addEventListener('click', function(){
-ChangePanorama('GEDUNGJOANG');
-});
-var infospotINDORJOANG21 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG20.addEventListener('click', function(){
+
+ChangePanorama('GEDUNGJOANG');
+
+});
+
+var infospotINDORJOANG21 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG21.position.set( 4856.45, -7.48, 1166.40 );
 					INDORJOANG2.add(infospotINDORJOANG21);
-infospotINDORJOANG21.addEventListener('click', function(){
-showMedia(1, 'images/22.jpg');
-});
-var infospotINDORJOANG22 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG21.addEventListener('click', function(){
+
+showMedia(1, 'images/22.jpg');
+
+});
+
+var infospotINDORJOANG22 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG22.position.set( 2632.39, 1.27, 4244.09 );
 					INDORJOANG2.add(infospotINDORJOANG22);
-infospotINDORJOANG22.addEventListener('click', function(){
-showMedia(1, 'images/11.jpg');
-});
-var infospotINDORJOANG23 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG22.addEventListener('click', function(){
+
+showMedia(1, 'images/11.jpg');
+
+});
+
+var infospotINDORJOANG23 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG23.position.set( 4984.15, -210.47, -144.62 );
 					INDORJOANG2.add(infospotINDORJOANG23);
-infospotINDORJOANG23.addEventListener('click', function(){
-window.open( 'https://www.youtube.com/watch?v=JzbNff1Xe_o', '_blank');
-});
-viewer.add( INDORJOANG2 );
-var umkm = new PANOLENS.ImagePanorama( "panoramas/umkm.jpg" );
+
+infospotINDORJOANG23.addEventListener('click', function(){
+
+window.open( 'https://www.youtube.com/watch?v=JzbNff1Xe_o', '_blank');
+
+});
+
+viewer.add( INDORJOANG2 );
+
+var umkm = new PANOLENS.ImagePanorama( "panoramas/umkm.jpg" );
 			umkm.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -269,22 +343,33 @@
 			umkm.addEventListener('click', function(e){
 			});
 
-var infospotumkm0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotumkm0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotumkm0.position.set( -572.64, -282.23, 4953.48 );
 					umkm.add(infospotumkm0);
-infospotumkm0.addEventListener('click', function(){
-ChangePanorama('KOTATUA');
-});
-var infospotumkm1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotumkm0.addEventListener('click', function(){
+
+ChangePanorama('KOTATUA');
+
+});
+
+var infospotumkm1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotumkm1.position.set( 4938.22, -410.78, 627.41 );
 					umkm.add(infospotumkm1);
-infospotumkm1.addEventListener('click', function(){
-showMedia(1, 'images/33.jpg');
-});
-viewer.add( umkm );
-$(document).ready(function(){ ChangePanorama('menuawal '); });
 
-/*panoramas-end*/
+infospotumkm1.addEventListener('click', function(){
+
+showMedia(1, 'images/33.jpg');
+
+});
+
+viewer.add( umkm );
+
+$(document).ready(function(){ ChangePanorama('menuawal '); });
+
+
+/*panoramas-end*/
             
 			
 			function hideTemp(){
