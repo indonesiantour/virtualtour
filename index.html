@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Ayam Petok</title>
+		<title>Virtual Tour</title>
 		<!--projectdescription--><meta name="description" content="Baruuuuurururuurru"><!--projectdescription-end-->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta charset="utf-8">
@@ -96,7 +96,8 @@
 		<div id="tmp">
 			<div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;" id="tmpcontent"></div>
 			<div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
-		</div>
+		</div>
+
 
 		<div id="loading" class="fullwrapper" style="display: table; width: 100%; height: 100%;">
     		<div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
@@ -108,13 +109,16 @@
 			
             var container = document.querySelector( '#container' );
 			/*panolens*/
-var viewer = new PANOLENS.Viewer( { container: container , controlBar: false,  output: 'console' , autoHideInfospot: false, } );
-/*panolens-end*/
+
+var viewer = new PANOLENS.Viewer( { container: container , controlBar: false,  output: 'console' , autoHideInfospot: false, } );
+
+/*panolens-end*/
 			
 			viewer.addUpdateCallback(function(){});
 			
 			/*panoramas*/
-var menuawal = new PANOLENS.ImagePanorama( "panoramas/menuawal.3.jpg" );
+
+var menuawal = new PANOLENS.ImagePanorama( "panoramas/menuawal.3.jpg" );
 			menuawal.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -124,20 +128,30 @@
 			menuawal.addEventListener('click', function(e){
 			});
 
-var infospotmenuawal0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotmenuawal0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotmenuawal0.position.set( 4601.01, -1829.55, -636.67 );
 					menuawal.add(infospotmenuawal0);
-infospotmenuawal0.addEventListener('click', function(){
-ChangePanorama('GEDUNGJOANG');
-});
-var infospotmenuawal1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotmenuawal0.addEventListener('click', function(){
+
+ChangePanorama('GEDUNGJOANG');
+
+});
+
+var infospotmenuawal1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotmenuawal1.position.set( 4111.01, -1684.85, 2278.33 );
 					menuawal.add(infospotmenuawal1);
-infospotmenuawal1.addEventListener('click', function(){
-ChangePanorama('KOTATUA');
-});
-viewer.add( menuawal );
-var INDORJOANG2 = new PANOLENS.ImagePanorama( "panoramas/INDORJOANG2.jpg" );
+
+infospotmenuawal1.addEventListener('click', function(){
+
+ChangePanorama('KOTATUA');
+
+});
+
+viewer.add( menuawal );
+
+var INDORJOANG2 = new PANOLENS.ImagePanorama( "panoramas/INDORJOANG2.jpg" );
 			INDORJOANG2.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -147,62 +161,100 @@
 			INDORJOANG2.addEventListener('click', function(e){
 			});
 
-var infospotINDORJOANG20 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotINDORJOANG20 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG20.position.set( 4761.19, -320.41, 1474.46 );
 					INDORJOANG2.add(infospotINDORJOANG20);
-infospotINDORJOANG20.addEventListener('click', function(){
-showMedia(1, 'images/soekarno.jpg');
-});
-var infospotINDORJOANG21 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG20.addEventListener('click', function(){
+
+showMedia(1, 'images/soekarno.jpg');
+
+});
+
+var infospotINDORJOANG21 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG21.position.set( 3013.51, -256.63, 3971.73 );
 					INDORJOANG2.add(infospotINDORJOANG21);
-infospotINDORJOANG21.addEventListener('click', function(){
-showMedia(1, 'images/mohhatta.jpg');
-});
-var infospotINDORJOANG22 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG21.addEventListener('click', function(){
+
+showMedia(1, 'images/mohhatta.jpg');
+
+});
+
+var infospotINDORJOANG22 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG22.position.set( -379.62, -580.80, -4942.38 );
 					INDORJOANG2.add(infospotINDORJOANG22);
-infospotINDORJOANG22.addEventListener('click', function(){
-showMedia(1, 'images/margonda.jpg');
-});
-var infospotINDORJOANG23 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG22.addEventListener('click', function(){
+
+showMedia(1, 'images/margonda.jpg');
+
+});
+
+var infospotINDORJOANG23 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG23.position.set( -3184.04, -549.95, -3802.81 );
 					INDORJOANG2.add(infospotINDORJOANG23);
-infospotINDORJOANG23.addEventListener('click', function(){
-showMedia(1, 'images/sayuti.jpg');
-});
-var infospotINDORJOANG24 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG23.addEventListener('click', function(){
+
+showMedia(1, 'images/sayuti.jpg');
+
+});
+
+var infospotINDORJOANG24 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG24.position.set( -4682.23, -813.23, -1546.64 );
 					INDORJOANG2.add(infospotINDORJOANG24);
-infospotINDORJOANG24.addEventListener('click', function(){
-showMedia(1, 'images/soedriman.jpg');
-});
-var infospotINDORJOANG25 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG24.addEventListener('click', function(){
+
+showMedia(1, 'images/soedriman.jpg');
+
+});
+
+var infospotINDORJOANG25 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG25.position.set( -3955.74, -723.84, 2962.53 );
 					INDORJOANG2.add(infospotINDORJOANG25);
-infospotINDORJOANG25.addEventListener('click', function(){
-showMedia(1, 'images/wikana.jpg');
-});
-var infospotINDORJOANG26 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG25.addEventListener('click', function(){
+
+showMedia(1, 'images/wikana.jpg');
+
+});
+
+var infospotINDORJOANG26 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG26.position.set( 1399.21, -973.84, 4691.31 );
 					INDORJOANG2.add(infospotINDORJOANG26);
-infospotINDORJOANG26.addEventListener('click', function(){
-ChangePanorama('INDORJOANG2mdfbz');
-});
-var infospotINDORJOANG27 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG26.addEventListener('click', function(){
+
+ChangePanorama('INDORJOANG2mdfbz');
+
+});
+
+var infospotINDORJOANG27 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG27.position.set( 1512.85, -808.18, -4694.93 );
 					INDORJOANG2.add(infospotINDORJOANG27);
-infospotINDORJOANG27.addEventListener('click', function(){
-showMedia(1, 'images/keris.jpg');
-});
-var infospotINDORJOANG28 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG27.addEventListener('click', function(){
+
+showMedia(1, 'images/keris.jpg');
+
+});
+
+var infospotINDORJOANG28 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG28.position.set( 4727.39, -785.89, -1408.82 );
 					INDORJOANG2.add(infospotINDORJOANG28);
-infospotINDORJOANG28.addEventListener('click', function(){
-showMedia(2, 'videos/PerangKemerdekaan1945(PascaProklamasi).mp4');
-});
-viewer.add( INDORJOANG2 );
-var GEDUNGJOANG = new PANOLENS.ImagePanorama( "panoramas/GEDUNGJOANG.jpg" );
+
+infospotINDORJOANG28.addEventListener('click', function(){
+
+showMedia(2, 'videos/PerangKemerdekaan1945(PascaProklamasi).mp4');
+
+});
+
+viewer.add( INDORJOANG2 );
+
+var GEDUNGJOANG = new PANOLENS.ImagePanorama( "panoramas/GEDUNGJOANG.jpg" );
 			GEDUNGJOANG.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -212,20 +264,30 @@
 			GEDUNGJOANG.addEventListener('click', function(e){
 			});
 
-var infospotGEDUNGJOANG0 = new PANOLENS.Infospot( 512, hotspotIcons[1].data, true );
+
+var infospotGEDUNGJOANG0 = new PANOLENS.Infospot( 512, hotspotIcons[1].data, true );
 					infospotGEDUNGJOANG0.position.set( 4848.11, -1170.55, -244.27 );
 					GEDUNGJOANG.add(infospotGEDUNGJOANG0);
-infospotGEDUNGJOANG0.addEventListener('click', function(){
-ChangePanorama('INDORJOANG2');
-});
-var infospotGEDUNGJOANG1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotGEDUNGJOANG0.addEventListener('click', function(){
+
+ChangePanorama('INDORJOANG2');
+
+});
+
+var infospotGEDUNGJOANG1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotGEDUNGJOANG1.position.set( 2006.75, -1672.37, -4254.54 );
 					GEDUNGJOANG.add(infospotGEDUNGJOANG1);
-infospotGEDUNGJOANG1.addEventListener('click', function(){
-ChangePanorama('menuawal');
-});
-viewer.add( GEDUNGJOANG );
-var KOTATUA = new PANOLENS.ImagePanorama( "panoramas/KOTATUA.jpg" );
+
+infospotGEDUNGJOANG1.addEventListener('click', function(){
+
+ChangePanorama('menuawal');
+
+});
+
+viewer.add( GEDUNGJOANG );
+
+var KOTATUA = new PANOLENS.ImagePanorama( "panoramas/KOTATUA.jpg" );
 			KOTATUA.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -235,26 +297,40 @@
 			KOTATUA.addEventListener('click', function(e){
 			});
 
-var infospotKOTATUA0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotKOTATUA0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotKOTATUA0.position.set( 4898.24, -921.84, -236.96 );
 					KOTATUA.add(infospotKOTATUA0);
-infospotKOTATUA0.addEventListener('click', function(){
-ChangePanorama('INDORkotatua');
-});
-var infospotKOTATUA1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotKOTATUA0.addEventListener('click', function(){
+
+ChangePanorama('INDORkotatua');
+
+});
+
+var infospotKOTATUA1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotKOTATUA1.position.set( 2521.46, -562.54, -4273.85 );
 					KOTATUA.add(infospotKOTATUA1);
-infospotKOTATUA1.addEventListener('click', function(){
-ChangePanorama('umkm');
-});
-var infospotKOTATUA2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotKOTATUA1.addEventListener('click', function(){
+
+ChangePanorama('umkm');
+
+});
+
+var infospotKOTATUA2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotKOTATUA2.position.set( -1013.13, -580.70, -4856.79 );
 					KOTATUA.add(infospotKOTATUA2);
-infospotKOTATUA2.addEventListener('click', function(){
-ChangePanorama('menuawal');
-});
-viewer.add( KOTATUA );
-var INDORkotatua = new PANOLENS.ImagePanorama( "panoramas/INDORkotatua.jpg" );
+
+infospotKOTATUA2.addEventListener('click', function(){
+
+ChangePanorama('menuawal');
+
+});
+
+viewer.add( KOTATUA );
+
+var INDORkotatua = new PANOLENS.ImagePanorama( "panoramas/INDORkotatua.jpg" );
 			INDORkotatua.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -264,38 +340,60 @@
 			INDORkotatua.addEventListener('click', function(e){
 			});
 
-var infospotINDORkotatua0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotINDORkotatua0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua0.position.set( -4017.40, -2481.71, 1618.26 );
 					INDORkotatua.add(infospotINDORkotatua0);
-infospotINDORkotatua0.addEventListener('click', function(){
-ChangePanorama('KOTATUA');
-});
-var infospotINDORkotatua1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORkotatua0.addEventListener('click', function(){
+
+ChangePanorama('KOTATUA');
+
+});
+
+var infospotINDORkotatua1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua1.position.set( 3624.36, -827.80, -3337.26 );
 					INDORkotatua.add(infospotINDORkotatua1);
-infospotINDORkotatua1.addEventListener('click', function(){
-showMedia(1, 'images/monas.jpg');
-});
-var infospotINDORkotatua2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORkotatua1.addEventListener('click', function(){
+
+showMedia(1, 'images/monas.jpg');
+
+});
+
+var infospotINDORkotatua2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua2.position.set( -344.65, -632.20, -4938.13 );
 					INDORkotatua.add(infospotINDORkotatua2);
-infospotINDORkotatua2.addEventListener('click', function(){
-showMedia(1, 'images/kota.jpg');
-});
-var infospotINDORkotatua3 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORkotatua2.addEventListener('click', function(){
+
+showMedia(1, 'images/kota.jpg');
+
+});
+
+var infospotINDORkotatua3 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua3.position.set( 785.92, -1209.06, -4779.30 );
 					INDORkotatua.add(infospotINDORkotatua3);
-infospotINDORkotatua3.addEventListener('click', function(){
-showMedia(1, 'images/ondel.jpg');
-});
-var infospotINDORkotatua4 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORkotatua3.addEventListener('click', function(){
+
+showMedia(1, 'images/ondel.jpg');
+
+});
+
+var infospotINDORkotatua4 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORkotatua4.position.set( -1774.99, -2482.67, -3955.23 );
 					INDORkotatua.add(infospotINDORkotatua4);
-infospotINDORkotatua4.addEventListener('click', function(){
-showMedia(2, 'videos/KehidupanOrangBelandadiIndonesiasaatPerangRevolusiKemerdekaantahun1945.mp4');
-});
-viewer.add( INDORkotatua );
-var umkm = new PANOLENS.ImagePanorama( "panoramas/umkm.jpg" );
+
+infospotINDORkotatua4.addEventListener('click', function(){
+
+showMedia(2, 'videos/KehidupanOrangBelandadiIndonesiasaatPerangRevolusiKemerdekaantahun1945.mp4');
+
+});
+
+viewer.add( INDORkotatua );
+
+var umkm = new PANOLENS.ImagePanorama( "panoramas/umkm.jpg" );
 			umkm.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -305,20 +403,30 @@
 			umkm.addEventListener('click', function(e){
 			});
 
-var infospotumkm0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotumkm0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotumkm0.position.set( -613.60, -311.36, 4945.83 );
 					umkm.add(infospotumkm0);
-infospotumkm0.addEventListener('click', function(){
-ChangePanorama('KOTATUA');
-});
-var infospotumkm1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotumkm0.addEventListener('click', function(){
+
+ChangePanorama('KOTATUA');
+
+});
+
+var infospotumkm1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotumkm1.position.set( 4362.60, -2308.68, 756.72 );
 					umkm.add(infospotumkm1);
-infospotumkm1.addEventListener('click', function(){
-showMedia(1, 'images/33.jpg');
-});
-viewer.add( umkm );
-var INDORJOANG2mdfbz = new PANOLENS.ImagePanorama( "panoramas/INDORJOANG2mdfbz.jpg" );
+
+infospotumkm1.addEventListener('click', function(){
+
+showMedia(1, 'images/33.jpg');
+
+});
+
+viewer.add( umkm );
+
+var INDORJOANG2mdfbz = new PANOLENS.ImagePanorama( "panoramas/INDORJOANG2mdfbz.jpg" );
 			INDORJOANG2mdfbz.addEventListener('progress', function(e){
 				$("#loading").show();
 			});
@@ -328,52 +436,83 @@
 			INDORJOANG2mdfbz.addEventListener('click', function(e){
 			});
 
-var infospotINDORJOANG2mdfbz0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+var infospotINDORJOANG2mdfbz0 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG2mdfbz0.position.set( -977.09, -2365.99, 4288.46 );
 					INDORJOANG2mdfbz.add(infospotINDORJOANG2mdfbz0);
-infospotINDORJOANG2mdfbz0.addEventListener('click', function(){
-ChangePanorama('GEDUNGJOANG');
-});
-var infospotINDORJOANG2mdfbz1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG2mdfbz0.addEventListener('click', function(){
+
+ChangePanorama('GEDUNGJOANG');
+
+});
+
+var infospotINDORJOANG2mdfbz1 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG2mdfbz1.position.set( 4836.48, 35.56, 1236.66 );
 					INDORJOANG2mdfbz.add(infospotINDORJOANG2mdfbz1);
-infospotINDORJOANG2mdfbz1.addEventListener('click', function(){
-showMedia(1, 'images/22.jpg');
-});
-var infospotINDORJOANG2mdfbz2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG2mdfbz1.addEventListener('click', function(){
+
+showMedia(1, 'images/22.jpg');
+
+});
+
+var infospotINDORJOANG2mdfbz2 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG2mdfbz2.position.set( 2579.05, -67.22, 4275.65 );
 					INDORJOANG2mdfbz.add(infospotINDORJOANG2mdfbz2);
-infospotINDORJOANG2mdfbz2.addEventListener('click', function(){
-showMedia(1, 'images/11.jpg');
-});
-var infospotINDORJOANG2mdfbz3 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG2mdfbz2.addEventListener('click', function(){
+
+showMedia(1, 'images/11.jpg');
+
+});
+
+var infospotINDORJOANG2mdfbz3 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG2mdfbz3.position.set( 4423.18, 139.31, 2305.34 );
 					INDORJOANG2mdfbz.add(infospotINDORJOANG2mdfbz3);
-infospotINDORJOANG2mdfbz3.addEventListener('click', function(){
-showMedia(1, 'images/5.png');
-});
-var infospotINDORJOANG2mdfbz4 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG2mdfbz3.addEventListener('click', function(){
+
+showMedia(1, 'images/5.png');
+
+});
+
+var infospotINDORJOANG2mdfbz4 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG2mdfbz4.position.set( 4556.08, 234.47, 2036.29 );
 					INDORJOANG2mdfbz.add(infospotINDORJOANG2mdfbz4);
-infospotINDORJOANG2mdfbz4.addEventListener('click', function(){
-showMedia(1, 'images/6.png');
-});
-var infospotINDORJOANG2mdfbz5 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG2mdfbz4.addEventListener('click', function(){
+
+showMedia(1, 'images/6.png');
+
+});
+
+var infospotINDORJOANG2mdfbz5 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG2mdfbz5.position.set( 3889.28, 97.39, -3125.26 );
 					INDORJOANG2mdfbz.add(infospotINDORJOANG2mdfbz5);
-infospotINDORJOANG2mdfbz5.addEventListener('click', function(){
-showMedia(1, 'images/4.png');
-});
-var infospotINDORJOANG2mdfbz6 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotINDORJOANG2mdfbz5.addEventListener('click', function(){
+
+showMedia(1, 'images/4.png');
+
+});
+
+var infospotINDORJOANG2mdfbz6 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotINDORJOANG2mdfbz6.position.set( 4128.40, 75.26, -2805.21 );
 					INDORJOANG2mdfbz.add(infospotINDORJOANG2mdfbz6);
-infospotINDORJOANG2mdfbz6.addEventListener('click', function(){
-showMedia(1, 'images/3.png');
-});
-viewer.add( INDORJOANG2mdfbz );
-$(document).ready(function(){ ChangePanorama('menuawal '); });
 
-/*panoramas-end*/
+infospotINDORJOANG2mdfbz6.addEventListener('click', function(){
+
+showMedia(1, 'images/3.png');
+
+});
+
+viewer.add( INDORJOANG2mdfbz );
+
+$(document).ready(function(){ ChangePanorama('menuawal '); });
+
+
+/*panoramas-end*/
             
 			
 			function hideTemp(){
